@@ -3,21 +3,19 @@ raspberry-pi-gmail-alarm
 
 A Python script written for the Raspberry Pi which checks your Gmail inbox for an alarming subject and sounds an alarm if it finds it.
 
-How to use:
-===========
+##How to Use##
 
-(1) Make sure your Raspberry Pi has a reliable Internet connection.
-(2) Change the following constants as needed.
-    - GMAIL_IMAP_URL = the URL to Gmail's IMAP service
-    - GMAIL_ADDRESS = the Gmail address
-    - GMAIL_PASSWORD = the Gmail password
-    - ALARMING_SUBJECT = If the subject contains this text, sound the alarm.
-    - ALARM_COMMAND = If the alarm is sounded, this is the Linux command that will get run. The default is to run mpg321 against alarm.mp3 in the present working directory.
-(3) If you are using the default ALARM_COMMAND, find an alarming MP3 file, name it alarm.mp3, and drop it into the present working directory. Otherwise, do what you need to do get your custom ALARM_COMMAND working.
-(4) Add a cron job which runs this python script as often as you like. The easiest way to do this is to run "crontab -e" and add a line to the crontab file.
+1. Make sure your Raspberry Pi has a reliable Internet connection.
+2. Change the following constants as needed.
+    - `GMAIL_IMAP_URL` = the URL to Gmail's IMAP service
+    - `GMAIL_ADDRESS` = the Gmail address
+    - `GMAIL_PASSWORD` = the Gmail password
+    - `ALARMING_SUBJECT` = If the subject contains this text, sound the alarm.
+    - `ALARM_COMMAND` = If the alarm is sounded, this is the Linux command that will get run. The default is to run `mpg321` against `alarm.mp3` in the present working directory.
+3. If you are using the default `ALARM_COMMAND`, find an alarming MP3 file, name it `alarm.mp3`, and drop it into the present working directory. Otherwise, do what you need to do get your custom `ALARM_COMMAND` working.
+4. Add a cron job which runs this python script as often as you like. The easiest way to do this is to run `crontab -e` and add a line to the crontab file.
 
-MIT LICENSE
-===========
+##MIT LICENSE##
 
 The MIT License (MIT)
 
